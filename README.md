@@ -9,11 +9,13 @@ A "Buy me a coffee" pill and Ko-fi tip panel for any page, in one dependency-fre
 
 ## Use
 
-Copy `kofi-pill.js` into your site and load it at the end of `<body>`:
+Load it at the end of `<body>`, from jsDelivr at a fixed version:
 
 ```html
-<script src="kofi-pill.js" defer data-kofi-id="YOUR_KOFI_ID"></script>
+<script src="https://cdn.jsdelivr.net/gh/nickells/kofi-pill@v1.0.0/kofi-pill.js" defer data-kofi-id="YOUR_KOFI_ID"></script>
 ```
+
+…or copy `kofi-pill.js` into your site and load it from there, so pages make no request to a CDN.
 
 `YOUR_KOFI_ID` is the id in your Ko-fi page's URL: `ko-fi.com/A7S62B6EOC` → `A7S62B6EOC`.
 
@@ -80,3 +82,7 @@ Every click on the pill or a `data-kofi` link fires a `kofi-pill:click` event on
 ```js
 document.addEventListener("kofi-pill:click", (e) => posthog.capture("kofi_click", e.detail));
 ```
+
+## License
+
+MIT
